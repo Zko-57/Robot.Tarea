@@ -13,12 +13,11 @@ public class Consola {
 
     public static void mostrarMenuPrincipal() {
         System.out.println("--- Terminal de control de robots. ---");
-        System.out.println("--------------------------------------------------------------------------------------------------");
         System.out.println();
-        System.out.println("1.- Controlar un robot por defecto.");
-        System.out.println("2.- Controlar un robot definiendo la zona.");
-        System.out.println("3.- Controlar un robot definiendo la zona y la orientación.");
-        System.out.println("4.- Controlar un robot definiendo la zona, la orientación y su coordenada inicial.");
+        System.out.println("1.- Crear un robot por defecto.");
+        System.out.println("2.- Crear un robot definiendo la zona.");
+        System.out.println("3.- Crear un robot definiendo la zona y la orientación.");
+        System.out.println("4.- Crear un robot definiendo la zona, la orientación y su coordenada inicial.");
         System.out.println("5.- Ejecutar comando.");
         System.out.println();
         System.out.println("0.- Salir.");
@@ -93,7 +92,9 @@ public class Consola {
     }
 
     public static char elegirComando() {
-        System.out.print("Indica el comando a ejecutar: ");
+        System.out.print("¿Que comando quieres ejecutar?: ");
+        System.out.println("(A) avanzar, (D) derecha, (I) girar a la izquierda.");
+        System.out.print("Elige una opción (A- D - I):");
         return Entrada.caracter();
     }
 
@@ -102,7 +103,7 @@ public class Consola {
         if (controladorRobot != null) {
             System.out.println(controladorRobot.getRobot());
         } else {
-            System.out.println("Aun no se ha creado ningún robot que controlar.");
+            System.out.println("Aún no se ha creado ningún robot que controlar.");
         }
         System.out.println();
     }

@@ -10,12 +10,12 @@ public class ControladorRobot {
         if (robot == null){
             throw new NullPointerException("El robot no puede ser nulo.");
         }
-        this.robot = new Robot();
+        this.robot = new Robot(robot);
     }
 
 
     public Robot getRobot(){
-        return new Robot();
+        return new Robot(robot);
     }
 
 
